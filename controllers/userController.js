@@ -137,7 +137,7 @@ export const login = async (req, res) => {
         }
         const exisitingUser = await User.findOne({ email })
         if (!exisitingUser) {
-            return res.status(400).json({
+            return res.status(404).json({
                 success: false,
                 message: "User not exists"
             })
