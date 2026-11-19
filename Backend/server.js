@@ -11,10 +11,10 @@ const app = express();
 const PORT = process.env.PORT || 3000
 
 app.use(express.json())
-app.use(cors ({
-    origin: process.env.CLIENT_URI,
-    credentials:true
-}))
+app.use(cors({
+    origin: "https://e-commerce-akf5.vercel.app",
+    credentials: true
+}));
 
 app.use("/api/user", userRoute)
 app.use("/api/product", productRoute)
